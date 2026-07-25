@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ParkEasy — Parking, planned.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav wrap">
+    <a class="brand" href="#"><span class="brand-mark">P</span>ParkEasy</a>
+    <div class="nav-links"><a href="#how">How it works</a><a href="#venues">Venues</a><a href="#help">Help</a></div>
+    <button class="account">Log in <span>→</span></button>
+  </nav>
+
+  <main>
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> PARKING, PLANNED</p>
+        <h1>Your spot is<br><em>already waiting.</em></h1>
+        <p class="intro">Book a secure parking space before you arrive. Less circling, more time where it counts.</p>
+        <div class="trust"><div class="avatars"><i>J</i><i>M</i><i>S</i></div><span>Trusted by <b>12,000+</b> drivers</span></div>
+      </div>
+
+      <div class="booking-card" id="book">
+        <div class="card-top"><div><p class="tiny">FIND YOUR SPACE</p><h2>Where are you headed?</h2></div><span class="live"><i></i> Live availability</span></div>
+        <form id="searchForm">
+          <label class="field location"><span class="icon">⌖</span><span><small>DESTINATION</small><input id="destination" value="Bukit Bintang, Kuala Lumpur" aria-label="Destination" /></span><button type="button" id="locate" aria-label="Use my location">◎</button></label>
+          <div class="fields-row">
+            <label class="field"><span class="icon">▣</span><span><small>ARRIVAL</small><input id="arrival" type="date" aria-label="Arrival date" /></span></label>
+            <label class="field"><span class="icon">◷</span><span><small>TIME</small><input id="time" type="time" aria-label="Arrival time" /></span></label>
+          </div>
+          <label class="field"><span class="icon">◌</span><span><small>DURATION</small><select id="duration" aria-label="Parking duration"><option>2 hours</option><option>3 hours</option><option>4 hours</option><option>All day</option></select></span></label>
+          <button class="primary" type="submit">See available spaces <span>→</span></button>
+        </form>
+        <p class="guarantee">✦ Free cancellation up to 1 hour before arrival</p>
+      </div>
+    </section>
+
+    <section class="marquee"><div><span>RESERVE AHEAD</span><b>✦</b><span>ARRIVE RELAXED</span><b>✦</b><span>YOUR TIME MATTERS</span><b>✦</b><span>RESERVE AHEAD</span></div></section>
+
+    <section class="venues wrap" id="venues">
+      <div class="section-head"><div><p class="eyebrow"><span></span> POPULAR NEAR YOU</p><h2>Skip the search.<br>Choose your spot.</h2></div><button class="text-button">Explore all venues <span>↗</span></button></div>
+      <div class="venue-grid" id="venueGrid"></div>
+    </section>
+
+    <section class="how wrap" id="how">
+      <div class="how-title"><p class="eyebrow"><span></span> SIMPLE BY DESIGN</p><h2>Park smarter<br>in three steps.</h2></div>
+      <div class="steps"><article><b>01</b><div class="step-icon">⌕</div><h3>Find your venue</h3><p>Search by destination, date and time. We’ll show what’s genuinely available.</p></article><article><b>02</b><div class="step-icon">▣</div><h3>Reserve in seconds</h3><p>Pick the space that suits you and pay securely before you leave home.</p></article><article><b>03</b><div class="step-icon">↗</div><h3>Drive right in</h3><p>Your reservation details and access instructions are ready in the app.</p></article></div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="wrap footer-row"><a class="brand" href="#"><span class="brand-mark">P</span>ParkEasy</a><p>Make space for what matters.</p><span>© 2026 ParkEasy</span></div></footer>
+  <div id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
